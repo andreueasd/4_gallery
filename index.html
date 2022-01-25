@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music files</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Xanh+Mono&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0%;
+                padding: 0%;
+                box-sizing: border-box;
+            }
+            html{
+                font-size: 32px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+            a{
+                text-decoration: none;
+                font-family: var(--xan);
+                margin: 30px;
+            }
+            :root{
+                --gris: #757575;
+                --grisclaro: #dbdbdb;
+                --grisoscuro: #252525;
+                --poppins: 'Poppins', sans-serif;
+                --negrita: 700;
+                --xan:'Xanh Mono', monospace;
+            }
+            header .container{
+                flex-direction: column;
+            }
+            body>header{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                padding: 40px 0px;
+                box-sizing: border-box;
+                width: 100%;
+                height: 60vh;
+                background-color: black;
+            }
+            header .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            h1{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 4.5em;
+                color: white;
+                display: flex;
+                justify-content: center;
+            }
+            h2{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+                color: var(--gris);
+                font-size: 0.6em;
+            }
+            h3{
+                font-family: var(--poppins);
+                font-size: 0.6em;
+                display: flex;
+                justify-content: center;
+                color: white;
+                padding-bottom: 30px;
+                padding-top: 10px;
+            }
+            nav a{
+                font-size: 0.6em;
+                font-family: var(--xan)
+            }
+            section:first-child{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: black;
+            }
+            section:first-child{
+                background-color: black;
+                height: 120vh;
+            }
+            section:first-child .container{
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                /* padding: 0 4em; */
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+            /*card portades*/
+            .cover{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width:300px;
+                min-width: 100px;
+                min-height: 200px;
+                max-height: 300px;
+                padding: 0.5em;
+                margin: 0.3em;
+                flex-grow: 1;
+                background-color: black;
+            }
+            .cover_img{
+                flex-grow: 1;
+                max: height 100px;
+                background: none;
+            }
+            .cover_img img{
+                flex-grow: 1;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .cover header{
+                flex-grow: 1;
+                background-color: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .cover h3{
+                font-size: 5em;
+                text-align: center;
+                font-size: 0.5em;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+            }
+            section:last-child{
+                height: 100%;
+                background-color: black;
+            }
+            footer{
+                height: 50vh;
+                background-color: var(--grisoscuro);
+            }
+            footer .container{
+                display: flex;
+                margin: 200px;
+                justify-content: center;
+            }
+            footer p a{
+                font-size: 0.75em;
+                text-transform: capitalize;
+                font-family: var(--xan);
+                color: white;
+                margin: 20px;
+            }
+            footer p{
+                width: 17%;
+            }
+            footer p:last-child{
+                width: 50%;
+                margin-left: 34%;
+                text-align: right;
+            }
+            /*card dissenyadors*/
+            section:last-child .container{
+                display: flex;
+            }
+            .card_dissenyadors{
+                margin: 3em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+                width: 300px;
+            }
+            .dissenyadors_img{
+                width: 250px;
+                height: 250px;
+            }
+            .dissenyadors_img img{
+                border-radius: 250px;
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                object-position: center;
+                flex-grow: 1;
+                box-shadow: black 0px 0px 20px;
+            }
+            .card_dissenyadors blockquote{
+                font-size: 5em;
+                text-align: center;
+                font-size: 0.5em;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+            }
+            .card_dissenyadors header{
+                margin-top: 0.8em;
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+            <h1>Music files</h1>
+            <h2>Galeria de portades de discs d'estudi de diferents artistes i els encarregats de dissenyar-los.</h2>
+            </hgroup>
+            <nav>
+                <a href="#Portades">Portades</a>
+                <a href="#Dissenyadors">Dissenyadors</a>
+                <a href="#Xarxes">Xarxes</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="#portades">
+            <h3>Portades</h3>
+            <div class="container">
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/blonde.png" alt="">
+                    </div>
+                    <header>
+                        <h3>Blonde</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/jcole1.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>The Off Season</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/kanye1.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Kids See Ghosts</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/tyler2.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Igor</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/keem1.png" alt="">
+                    </div>
+                    <header>
+                        <h3>The Melodic Blue</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/kL.png" alt="">
+                    </div>
+                    <header>
+                        <h3>To Pimp a Butterfly</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/sumertime.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Summertime</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/over/aphex.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>...I Care Because You Do</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/huncho1.png" alt="">
+                    </div>
+                    <header>
+                        <h3>Huncho Jack, Jack Huncho</h3>
+                    </header>
+                </div>
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/cover/jpegmafia.png" alt="">
+                    </div>
+                    <header>
+                        <h3>Veteran</h3>
+                    </header>
+                </div>
+            </div>
+        </section>
+        <section id="#xx">
+            <h3>Dissenyadors</h3>
+            <div class="container">
+                <div class="card_dissenyadors">
+                    <div class="dissenyadors_img">
+                        <img src="images/cover/abloh.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>
+                            Virgil Abloh
+                        </h3>
+                        <blockquote>
+                            “Music needs a visual element to make it tangible. So, naturally, there's gonna be a synergy between high-level art direction and high-level albums.”
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="card_dissenyadors">
+                    <div class="dissenyadors_img">
+                        <img src="images/cover/tillmans.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>
+                            Wolfgang Tillmans
+                        </h3>
+                        <blockquote>
+                            “For me, a good portrait shows the fragility and humility of the person, and at the same time a strength, a resting in themselves.”
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="card_dissenyadors">
+                    <div class="dissenyadors_img">
+                        <img src="images/cover/rossignol.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>
+                            Lewis Rossignol
+                        </h3>
+                        <blockquote>
+                            -
+                        </blockquote>
+                    </header>
+                </div>
+            </div>
+        </section>
+</main>
+    <footer id="#Xarxes">
+            <h3>Xarxes</h3>
+            <div class="container">
+                <p><a href="https://www.instagram.com/a.alborxx/">Instagram</a></p>
+                <p><a href="https://twitter.com/alborch_andreu">Twitter</a></p>
+                <p><a href="https://open.spotify.com/user/4fiq9l9on8xo12157isya6brn?si=9c49b6dc8e144883">Spotify</a></p>
+                <p><a href="#"></a></p>
+            </div>
+    </footer>
+</body>
+</html>
